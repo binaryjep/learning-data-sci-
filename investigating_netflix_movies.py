@@ -1,7 +1,7 @@
 import pandas as pd 
 import matplotlib.pyplot as plt 
 
-netflix_df = pd.read_csv("netflix_data.csv", index_col=0) # import csv file as dataframe using pandas
+netflix_df = pd.read_csv("datasets\netflix_data.csv", index_col=0) # import csv file as dataframe using pandas
 netflix_subset = netflix_df[netflix_df["type"] == "Movie"] #subset the dataframe to only include those whose type is a movie
 netflix_movies = netflix_subset.loc[:, ["title", "country", "release_year", "duration", "genre"]] #only include columns for title, country, release year and duration
 short_movies = netflix_movies[netflix_movies["duration"] < 60] #examine the movies whose duration is shorter than 60 minutes
