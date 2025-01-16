@@ -9,6 +9,10 @@ groups = {
 
 restaurant_groups = pd.DataFrame(groups)
 
+# Create a historgram of the group size 
+restaurant_groups['group_size'].hist(bins=[2,3,4,5,6])
+plt.show()
+
 # Create probability distribution
 size_dist =restaurant_groups['group_size'].value_counts() / restaurant_groups.shape[0]
 
